@@ -1,7 +1,7 @@
-import UIKit
 import React
-import React_RCTAppDelegate
 import ReactAppDependencyProvider
+import React_RCTAppDelegate
+import UIKit
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -28,8 +28,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       in: window,
       launchOptions: launchOptions
     )
-
+    showSplashScreen()
     return true
+  }
+
+  private func showSplashScreen() {
+    DispatchQueue.main.async {
+      if let splashClass = NSClassFromString("SplashView") as? NSObject.Type,
+        let splashInstance = splashClass.perform(NSSelectorFromString("sharedInstance"))?
+          .takeUnretainedValue() as? NSObject
+      {
+        splashInstance.perform(NSSelectorFromString("showSplash"))
+      }
+    }
   }
 }
 
@@ -39,10 +50,10 @@ class ReactNativeDelegate: RCTDefaultReactNativeFactoryDelegate {
   }
 
   override func bundleURL() -> URL? {
-#if DEBUG
-    RCTBundleURLProvider.sharedSettings().jsBundleURL(forBundleRoot: "index")
-#else
-    Bundle.main.url(forResource: "main", withExtension: "jsbundle")
-#endif
+    #if DEBUG
+      RCTBundleURLProvider.sharedSettings().jsBundleURL(forBundleRoot: "index")
+    #else
+      Bundle.main.url(forResource: "main", withExtension: "jsbundle")
+    #endif
   }
 }
