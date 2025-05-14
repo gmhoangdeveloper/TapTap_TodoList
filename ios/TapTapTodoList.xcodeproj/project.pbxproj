@@ -9,22 +9,34 @@
 /* Begin PBXBuildFile section */
 		0C80B921A6F3F58F76C31292 /* libPods-TapTapTodoList.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DCACB8F33CDC322A6C60F78 /* libPods-TapTapTodoList.a */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
+		1ED3E90E22A448E99B9C2144 /* SFProDisplay-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = BE43B30D08B748A085F8672B /* SFProDisplay-Semibold.otf */; };
+		27A0F8A6DD9B45BBA2022D7C /* SFProDisplay-RegularItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 110C14023F37436187EBFB9C /* SFProDisplay-RegularItalic.otf */; };
+		28E42155245F40CC89C7CB2E /* SFProDisplay-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 81F9BBE2F62F43C686E75E97 /* SFProDisplay-Light.otf */; };
+		505E07567D6E49BFA8D23B7C /* SFProDisplay-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = C203DAE171194C7193136212 /* SFProDisplay-Medium.otf */; };
 		761780ED2CA45674006654EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761780EC2CA45674006654EE /* AppDelegate.swift */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		8E01535B01064C3D90ECD663 /* SFProDisplay-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5505150CEC114BE99FE11899 /* SFProDisplay-Bold.otf */; };
 		8F10BAD265A3AF19AA739ABD /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */; };
+		BC0DC0A76EE84A86AD17909A /* SFProDisplay-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = FB85FBE545E74CC29370C7FB /* SFProDisplay-Regular.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		110C14023F37436187EBFB9C /* SFProDisplay-RegularItalic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "SFProDisplay-RegularItalic.otf"; path = "../src/Assets/fonts/SFProDisplay-RegularItalic.otf"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* TapTapTodoList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TapTapTodoList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = TapTapTodoList/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = TapTapTodoList/Info.plist; sourceTree = "<group>"; };
 		13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = PrivacyInfo.xcprivacy; path = TapTapTodoList/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		3B4392A12AC88292D35C810B /* Pods-TapTapTodoList.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TapTapTodoList.debug.xcconfig"; path = "Target Support Files/Pods-TapTapTodoList/Pods-TapTapTodoList.debug.xcconfig"; sourceTree = "<group>"; };
+		5505150CEC114BE99FE11899 /* SFProDisplay-Bold.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "SFProDisplay-Bold.otf"; path = "../src/Assets/fonts/SFProDisplay-Bold.otf"; sourceTree = "<group>"; };
 		5709B34CF0A7D63546082F79 /* Pods-TapTapTodoList.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TapTapTodoList.release.xcconfig"; path = "Target Support Files/Pods-TapTapTodoList/Pods-TapTapTodoList.release.xcconfig"; sourceTree = "<group>"; };
 		5DCACB8F33CDC322A6C60F78 /* libPods-TapTapTodoList.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TapTapTodoList.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		761780EC2CA45674006654EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = TapTapTodoList/AppDelegate.swift; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = TapTapTodoList/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		81F9BBE2F62F43C686E75E97 /* SFProDisplay-Light.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "SFProDisplay-Light.otf"; path = "../src/Assets/fonts/SFProDisplay-Light.otf"; sourceTree = "<group>"; };
+		BE43B30D08B748A085F8672B /* SFProDisplay-Semibold.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "SFProDisplay-Semibold.otf"; path = "../src/Assets/fonts/SFProDisplay-Semibold.otf"; sourceTree = "<group>"; };
+		C203DAE171194C7193136212 /* SFProDisplay-Medium.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "SFProDisplay-Medium.otf"; path = "../src/Assets/fonts/SFProDisplay-Medium.otf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		FB85FBE545E74CC29370C7FB /* SFProDisplay-Regular.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "SFProDisplay-Regular.otf"; path = "../src/Assets/fonts/SFProDisplay-Regular.otf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +72,19 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		67962E424A724DA1B74C36E4 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5505150CEC114BE99FE11899 /* SFProDisplay-Bold.otf */,
+				81F9BBE2F62F43C686E75E97 /* SFProDisplay-Light.otf */,
+				C203DAE171194C7193136212 /* SFProDisplay-Medium.otf */,
+				FB85FBE545E74CC29370C7FB /* SFProDisplay-Regular.otf */,
+				110C14023F37436187EBFB9C /* SFProDisplay-RegularItalic.otf */,
+				BE43B30D08B748A085F8672B /* SFProDisplay-Semibold.otf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
@@ -75,6 +100,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				BBD78D7AC51CEA395F1C20DB /* Pods */,
+				67962E424A724DA1B74C36E4 /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -161,6 +187,12 @@
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				8F10BAD265A3AF19AA739ABD /* PrivacyInfo.xcprivacy in Resources */,
+				8E01535B01064C3D90ECD663 /* SFProDisplay-Bold.otf in Resources */,
+				28E42155245F40CC89C7CB2E /* SFProDisplay-Light.otf in Resources */,
+				505E07567D6E49BFA8D23B7C /* SFProDisplay-Medium.otf in Resources */,
+				BC0DC0A76EE84A86AD17909A /* SFProDisplay-Regular.otf in Resources */,
+				27A0F8A6DD9B45BBA2022D7C /* SFProDisplay-RegularItalic.otf in Resources */,
+				1ED3E90E22A448E99B9C2144 /* SFProDisplay-Semibold.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -191,9 +223,13 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-TapTapTodoList/Pods-TapTapTodoList-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
+			inputPaths = (
+			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-TapTapTodoList/Pods-TapTapTodoList-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -230,9 +266,13 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-TapTapTodoList/Pods-TapTapTodoList-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
+			inputPaths = (
+			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-TapTapTodoList/Pods-TapTapTodoList-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -378,10 +418,7 @@
 					"-DFOLLY_CFG_NO_COROUTINES=1",
 					"-DFOLLY_HAVE_CLOCK_GETTIME=1",
 				);
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					" ",
-				);
+				OTHER_LDFLAGS = "$(inherited)  ";
 				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) DEBUG";
@@ -450,10 +487,7 @@
 					"-DFOLLY_CFG_NO_COROUTINES=1",
 					"-DFOLLY_HAVE_CLOCK_GETTIME=1",
 				);
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					" ",
-				);
+				OTHER_LDFLAGS = "$(inherited)  ";
 				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
 				USE_HERMES = true;

@@ -1,19 +1,16 @@
-import { Icon } from '@Components/Icon';
-import Styles from '@Styles';
-import React, { useRef } from 'react';
+import React, { useRef } from 'react'
+import { hideSplash } from 'react-native-splash-view';
 import {
-    KeyboardAvoidingView,
-    Platform,
     ScrollView,
+    StatusBar,
     StyleSheet,
     Text,
-    TextInput,
     TouchableOpacity,
-    View
+    View, TextInput
 } from 'react-native';
-import Animated, { Easing, FadeIn, FadeOut, ReduceMotion, useAnimatedStyle, useSharedValue, withDelay, withTiming } from 'react-native-reanimated';
-import { hideSplash } from 'react-native-splash-view';
-Animated.addWhitelistedNativeProps({ text: true });
+import Animated, { cancelAnimation, createAnimatedPropAdapter, Easing, FadeIn, FadeOut, ReduceMotion, useAnimatedProps, useAnimatedStyle, useSharedValue, withDelay, withSpring, withTiming } from 'react-native-reanimated'
+import { Icon } from '@Components/Icon';
+import Styles from '@Styles';
 
 
 const AnimatedTouchableOpacity = Animated.createAnimatedComponent(TouchableOpacity)
@@ -28,36 +25,39 @@ const Routes = () => {
     }, []);
 
     return (
-        <KeyboardAvoidingView
-            behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
-            style={{ flex: 1, justifyContent: 'flex-end' }}
-        >
-            <View style={{
-                flex: 1,
-                backgroundColor: "#6b3de8",
+        <View style={{
+            flex: 1,
+            backgroundColor: "#6b3de8",
 
-            }}>
-                <ScrollView
-                    style={{ flexGrow: 1, borderWidth: 1 }}
-                    contentContainerStyle={{
-                        flex: 1,
-                        paddingHorizontal: 16
-                    }}
-                >
-                    <View
-                        style={{
-                            columnGap: 10,
-                            rowGap: 10,
-                        }}>
-                        {fakeData.map((item, key) => <Item item={item} key={key} />)}
-                    </View>
-                </ScrollView>
-            </View>
-        </KeyboardAvoidingView>
+        }}>
+            <ScrollView
+                style={{ flexGrow: 1, borderWidth: 1 }}
+                contentContainerStyle={{
+                    flex: 1,
+                    paddingHorizontal: 16
+                }}
+            >
+                <View
+                    style={{
+                        columnGap: 10,
+                        rowGap: 10,
+                    }}>
+                    {fakeData.map((item, key) => <Item item={item} key={key} />)}
+                </View>
+            </ScrollView>
+        </View>
     )
 }
-
-
+const TextInputAdapter = createAnimatedPropAdapter(
+    (props) => {
+        'worklet';
+        if (Object.keys(props).includes('value')) {
+            props.text = props.value;
+            delete props.value;
+        }
+    },
+    ['text']
+);
 const Item = ({ item }: any) => {
     const [isEdit, setIsEdit] = React.useState<boolean>(true)
     const height = useSharedValue(90)
@@ -77,8 +77,8 @@ const Item = ({ item }: any) => {
         })
         checkOpacity.value = withTiming(0, { duration: 250 })
         inputBorderBottom.value = withTiming(1, { duration: 500 })
-        inputTop.value = withTiming(40, { duration: 500 })
-        inputLeft.value = withTiming(16, { duration: 500 })
+        inputTop.value = withSpring(40, { duration: 500 })
+        inputLeft.value = withSpring(16, { duration: 500 })
         inputWidth.value = withDelay(200, withTiming(Styles.dimensions.width - (32 * 2)))
     }
     const endAnimation = () => {
@@ -172,17 +172,13 @@ const Item = ({ item }: any) => {
         }]}>
             <Text style={{ fontWeight: "600", fontSize: 16 }}>Task</Text>
         </Animated.View> */}
-        <Animated.View style={[animatedInputStyles, {
+        <AnimatedInput value={"Task"} style={[animatedInputStyles, {
             height: 30,
+            // width: Styles.dimensions.width - (32 * 2),
+            fontWeight: "600", fontSize: 16,
             position: "absolute", justifyContent: "center",
-        }]}>
-            <TextInput value={"hoang hoang ho"} style={[{
-                height: 30,
-                width: Styles.dimensions.width - ((32 * 2) + 56),
-                fontWeight: "600", fontSize: 16,
-            }]} />
-        </Animated.View>
-
+            // backgroundColor: "red"
+        }]} />
         {isEdit ?
             <>
                 <View style={{ flexDirection: "row", marginTop: 16 }}>

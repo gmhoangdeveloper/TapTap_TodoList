@@ -1,19 +1,22 @@
+/* eslint-disable react-native/no-inline-styles */
+/**
+ * Sample React Native App
+ * https://github.com/facebook/react-native
+ *
+ * @format
+ */
 
 import React from 'react';
 
 
 import { Provider } from 'react-redux';
-import "react-native-gesture-handler"
+
+import 'react-native-gesture-handler';
 
 import { store } from '@Store';
-import Routes from './src/Routes';
-import { hideSplash } from 'react-native-splash-view';
+import Routes from 'src/Routes';
 
 function App(): React.JSX.Element {
-  React.useEffect(() => {
-    hideSplash(); // Hide after some time
-
-  }, []);
   return (
     <Provider store={store}>
       <Routes />
