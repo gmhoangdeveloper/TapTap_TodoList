@@ -16,7 +16,10 @@ export default {
       error: '#E75243',
     },
     dark: {
-      // main: '#3e4e4d',
+      main: '#6b3de8',
+      primary: '#F9F9FC',
+      second: '#FFE7BA',
+      error: '#E75243',
     },
   },
   button: {
@@ -24,7 +27,6 @@ export default {
     text: '#FFFFFF',
     disable: "#DFDFEF",
     height: 52,
-    background2: "#EBEBF4"
   },
   text: {
     titleColor: '#6b3de8',
@@ -35,13 +37,11 @@ export default {
     blue: "#1890FF",
     green: "#52C41A"
   },
-  border: "#EAEAF4",
+  borderColor: '#ABABAB',
   backgroundBody: '#FFFFFF',
   backgroundPaper: '#F8F8FB',
   backgroundScreen: '#F3F3F8',
-  borderColor: '#ABABAB',
-  borderColorV2: '#EAEAEA',
-
+  dots: "#DFDFEF",
   shadow: {
     shadowColor: "rgba(8, 19, 40, 0.10)",
     shadowOffset: {
@@ -52,8 +52,6 @@ export default {
     shadowRadius: 9.51,
     elevation: 15,
   },
-  dots: "#DFDFEF",
-
   radius: {
     button: 8,
     image: 12,

@@ -1,24 +1,18 @@
 
 import React from 'react';
-
+import "react-native-gesture-handler";
 
 import { Provider } from 'react-redux';
-import "react-native-gesture-handler"
 
 import { store } from '@Store';
 import Routes from './src/Routes';
-import { hideSplash } from 'react-native-splash-view';
 
 function App(): React.JSX.Element {
-  React.useEffect(() => {
-    hideSplash(); // Hide after some time
 
-  }, []);
   return (
     <Provider store={store}>
       <Routes />
     </Provider>
-
   );
 }
 export default App;

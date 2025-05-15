@@ -19,7 +19,8 @@
       "@Images/*": ["src/Assets/Images/*"],
       "@Fonts/*": ["src/Assets/Fonts/*"],
       "@Assets/*": ["src/Assets/*"],
-      "@Validations": ["src/Validations"]
+      "@Validations": ["src/Validations"],
+      "@Navigation": ["src/Navigation"]
     }
   },
   "exclude": [

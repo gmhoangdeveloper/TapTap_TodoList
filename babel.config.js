@@ -40,7 +40,8 @@ module.exports = function (api) {
             '@Assets': './src/Assets',
             '@Assets/*': './src/Assets/*',
             '@Validations': './src/Validations',
-            '@I18n': './src/I18n',
+            '@Navigation': './src/Navigation',
+      
           },
         },
       ],

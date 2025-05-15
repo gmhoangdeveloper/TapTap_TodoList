@@ -14,7 +14,7 @@ import IconMaterialIcons from 'react-native-vector-icons/MaterialIcons'
 import IconOcticons from 'react-native-vector-icons/Octicons'
 import IconSimpleLineIcons from 'react-native-vector-icons/SimpleLineIcons'
 import IconZocial from 'react-native-vector-icons/Zocial'
-// import Styles from '@Styles'
+import Styles from '@Styles'
 
 interface IProps {
   type:
@@ -83,7 +83,7 @@ const IconCustom = ({ type, ...props }: IProps) => {
 IconCustom.defaultProps = {
   type: 'FontAwesome',
   size: 18,
-  // color: Styles.text.primaryColor
+  color: Styles.text.primaryColor
 }
 
 export { IconCustom as Icon }
