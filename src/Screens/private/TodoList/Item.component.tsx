@@ -153,8 +153,7 @@ const Item = ({ item, index }: IItemProps) => {
                         <Text color="third">Xong</Text>
                     </TouchableOpacity>
                 </View>
-            </Animated.View>
-        }
+            </Animated.View>}
     </Animated.View >
 }
 

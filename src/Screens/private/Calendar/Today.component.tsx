@@ -32,9 +32,16 @@ const Today = () => {
     const [operationTimeBooking, setOperationTimeBooking] = useState<timeSequence[]>([])
     const scrollViewRef = useRef<ScrollView>(null)
 
-    useEffect(() => {
+    // useFocusEffect(
+    //     React.useCallback(() => {
+    //         getData()
+
+    //     }, [JSON.stringify(todo)])
+    // );
+
+    React.useEffect(() => {
         getData()
-    }, [todo.length])
+    }, [JSON.stringify(todo)])
 
     useEffect(() => {
         if (scrollViewRef.current && !loading) {
@@ -102,9 +109,7 @@ const Today = () => {
                                                 key={i}
                                                 style={[
                                                     styles.rowEmptyTodo,
-                                                    disable && {
-                                                        backgroundColor: '#EBEBEB'
-                                                    }
+                                                    disable && { backgroundColor: '#EBEBEB' }
                                                 ]}
                                             />
                                         return <View
@@ -112,7 +117,6 @@ const Today = () => {
                                             style={[
                                                 styles.rowEmptyTodo,
                                                 { backgroundColor: key % 2 === 0 ? 'white' : '#f8f8f8' },
-
                                             ]}
                                         />
                                     }
@@ -137,20 +141,26 @@ const Today = () => {
                                                     left: 160 * k,
                                                     top: 40 * value.key,
                                                 },
-                                                moment(moment(value.date)).isBefore() && {
-                                                    opacity: 0.6
-                                                }
+                                                moment(moment(value.date)).isBefore() && { opacity: 0.6 }
                                             ]}
                                         >
+
                                             <View
                                                 style={[
-                                                    {
-                                                        backgroundColor: top % 2 === 0 ? 'white' : '#f8f8f8',
-                                                        borderLeftColor: top % 2 === 0 ? Styles.palette.light.main : '#8961F6FF',
-                                                    },
                                                     styles.containerTodoDetail,
+                                                    {
+                                                        overflow: "hidden",
+                                                        paddingLeft: 8,
+                                                        backgroundColor: top % 2 === 0 ? 'white' : '#f8f8f8',
+                                                    },
                                                 ]}
                                             >
+                                                <View style={{
+                                                    ...StyleSheet.absoluteFillObject,
+                                                    borderLeftColor: top % 2 === 0 ? Styles.palette.light.main : '#8961F6FF',
+                                                    height: 100,
+                                                    borderLeftWidth: 3, width: 20,
+                                                }} />
                                                 <View style={{ flexDirection: "row", justifyContent: "space-between" }}>
                                                     <Text variant="body" font="bold" customColor={Styles.palette.light.main}>{value.title}</Text>
                                                 </View>
@@ -160,8 +170,7 @@ const Today = () => {
                                                 />
                                                 <ItemService
                                                     title="Mức độ:"
-                                                    content={<Text variant="body" size={14} customColor={priorityDetail?.color} font="regular" >{priorityDetail?.title}</Text>
-                                                    }
+                                                    content={<Text variant="body" size={14} customColor={priorityDetail?.color} font="regular" >{priorityDetail?.title}</Text>}
                                                 />
                                             </View>
                                         </View>
@@ -214,7 +223,6 @@ const styles = StyleSheet.create({
         marginHorizontal: 5,
         padding: 5,
         borderRadius: Styles.borderRadius.xs,
-        borderLeftWidth: 2,
         borderWidth: 1,
         borderColor: Styles.borderColor,
     },
