@@ -20,7 +20,9 @@
       "@Fonts/*": ["src/Assets/Fonts/*"],
       "@Assets/*": ["src/Assets/*"],
       "@Validations": ["src/Validations"],
-      "@Navigation": ["src/Navigation"]
+      "@Navigation": ["src/Navigation"],
+      "@Models": ["src/Models"],
+      "@Models/*": ["src/Models/*"]
     }
   },
   "exclude": [

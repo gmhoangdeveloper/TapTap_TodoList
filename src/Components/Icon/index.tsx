@@ -34,56 +34,55 @@ interface IProps {
   | 'FontAwesome5'
   name: string
   color?: string
-  size: number
+  size?: number
 }
 
-const IconCustom = ({ type, ...props }: IProps) => {
+const IconCustom = ({ type = 'FontAwesome',
+  size = 18,
+  color = Styles.text.primaryColor,
+  ...restProps }: IProps) => {
+  const iconProps = { size, color, ...restProps }
+
   if (type === 'AntDesign') {
-    return <IconAntDesign {...props} />
+    return <IconAntDesign {...iconProps} />
   }
   if (type === 'Entypo') {
-    return <IconEntypo {...props} />
+    return <IconEntypo {...iconProps} />
   }
   if (type === 'EvilIcons') {
-    return <IconEvilIcons {...props} />
+    return <IconEvilIcons {...iconProps} />
   }
   if (type === 'Feather') {
-    return <IconFeather {...props} />
+    return <IconFeather {...iconProps} />
   }
   if (type === 'Foundation') {
-    return <IconFoundation {...props} />
+    return <IconFoundation {...iconProps} />
   }
   if (type === 'FontAwesome') {
-    return <IconFontAwesome {...props} />
+    return <IconFontAwesome {...iconProps} />
   }
   if (type === 'FontAwesome5') {
-    return <IconFontAwesome5 {...props} />
+    return <IconFontAwesome5 {...iconProps} />
   }
   if (type === 'Fontisto') {
-    return <IconFontisto {...props} />
+    return <IconFontisto {...iconProps} />
   }
   if (type === 'Ionicons') {
-    return <IconIonicons {...props} />
+    return <IconIonicons {...iconProps} />
   }
   if (type === 'MaterialCommunityIcons') {
-    return <IconMaterialCommunityIcons {...props} />
+    return <IconMaterialCommunityIcons {...iconProps} />
   }
   if (type === 'MaterialIcons') {
-    return <IconMaterialIcons {...props} />
+    return <IconMaterialIcons {...iconProps} />
   }
   if (type === 'Octicons') {
-    return <IconOcticons {...props} />
+    return <IconOcticons {...iconProps} />
   }
   if (type === 'SimpleLineIcons') {
-    return <IconSimpleLineIcons {...props} />
+    return <IconSimpleLineIcons {...iconProps} />
   }
-  return <IconZocial {...props} />
-}
-
-IconCustom.defaultProps = {
-  type: 'FontAwesome',
-  size: 18,
-  color: Styles.text.primaryColor
+  return <IconZocial {...iconProps} />
 }
 
 export { IconCustom as Icon }

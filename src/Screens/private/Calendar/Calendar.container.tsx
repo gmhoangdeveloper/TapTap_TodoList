@@ -1,14 +1,15 @@
-import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
+import { ScreenLayout } from '@Components';
+import React from 'react';
+import Header from './Header.component';
+import Today from './Today.component';
 
 const Calendar = () => {
     return (
-        <View>
-            <Text>Calendar</Text>
-        </View>
-    )
-}
+        <ScreenLayout edges={['top']} >
+            <Header />
+            <Today />
+        </ScreenLayout>
+    );
+};
 
-export default Calendar
-
-const styles = StyleSheet.create({})
+export default Calendar;

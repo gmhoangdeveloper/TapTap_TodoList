@@ -37,9 +37,9 @@ export default {
     blue: "#1890FF",
     green: "#52C41A"
   },
-  borderColor: '#ABABAB',
+  borderColor: '#EAEAF4',
   backgroundBody: '#FFFFFF',
-  backgroundPaper: '#F8F8FB',
+  backgroundPaper: '#EBEBEBFF',
   backgroundScreen: '#F3F3F8',
   dots: "#DFDFEF",
   shadow: {
@@ -84,8 +84,7 @@ export default {
   gutter: {
     text: 8,
     component: 12,
-    container: 20,
-    containerV2: 16,
+    container: 16,
   },
   fontFamily: {
     semibold: 'SFProDisplay-Semibold',

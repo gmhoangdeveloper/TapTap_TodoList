@@ -3,9 +3,11 @@ import React from 'react';
 
 import { Icon } from '@Components/Icon';
 import { MAIN_STACK } from '@Constants/Navigation.Constant';
-import { Calendar } from '@Screens';
+import type { BottomTabScreenProps } from '@react-navigation/bottom-tabs';
+import { Calendar, TodoList } from '@Screens';
 import Styles from '@Styles';
 import { StyleSheet } from 'react-native';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 const Tab = createBottomTabNavigator();
 
@@ -14,14 +16,17 @@ const tabBarLabelStyle = {
     fontFamily: Styles.fontFamily.regular
 }
 
-const MainNavigator = ((props) => {
+const MainNavigator = (props: BottomTabScreenProps<any>) => {
+    const insets = useSafeAreaInsets();
+
     return (<>
         <Tab.Navigator
             screenOptions={{
                 tabBarInactiveTintColor: '#9C9CB1',
                 tabBarActiveTintColor: Styles.palette.light.main,
                 tabBarItemStyle: { paddingVertical: Styles.padding.xs },
-                headerShown: false
+                headerShown: false,
+                tabBarStyle: { height: 60 + insets.bottom },
             }}
             initialRouteName={MAIN_STACK.CANLENDAR}>
             <Tab.Screen
@@ -29,7 +34,7 @@ const MainNavigator = ((props) => {
                 initialParams={props.route.params}
                 component={Calendar}
                 options={({ route }) => ({
-                    tabBarLabel: 'Lịch',
+                    tabBarLabel: 'Hôm nay',
                     tabBarLabelStyle,
                     tabBarIcon: ({ focused }) => <Icon name='calendar' type='AntDesign' size={23} color={focused ? Styles.palette.light.main : Styles.text.primaryColor} />
                 })}
@@ -37,7 +42,7 @@ const MainNavigator = ((props) => {
             <Tab.Screen
                 name={MAIN_STACK.TODO_LIST}
                 initialParams={props.route.params}
-                component={() => <></>}
+                component={TodoList}
                 options={({ route }) => ({
                     tabBarLabel: 'Công việc',
                     tabBarLabelStyle,
@@ -48,7 +53,7 @@ const MainNavigator = ((props) => {
         </Tab.Navigator>
     </>
     );
-});
+}
 
 const styles = StyleSheet.create({
 
